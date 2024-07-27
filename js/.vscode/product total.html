@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product Total</title>
+    <style>
+        .pic{
+            width: 3rem;
+            height: 3rem;
+        }
+        .pic img{
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">View Cart</h1>
+    <table align="center" width="80%" border="5" cellpadding="8">
+    
+        <tr>
+            <td>Product info</td>
+            <td>Quantity</td>
+            <td>Price (per unit)</td>
+            <td>Price (subtotal)</td>
+            <td><a href="#">delete</a></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <div class="pic">
+                    <img src="https://img.kwcdn.com/product/open/2023-09-06/1693978275027-73abf00d3d4f4885a66236a1d4801561-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="" height="100%" width="100%">
+                </div>
+                Fortunata window hardware<br> Decorative holdback- Mocha
+            </td>
+            <td><input type="number" id="qty" value="1" min="0" max="10" style="width:85px" onchange="subtotal()"/></td>
+            <td>Rs.<input type="text" id="price" value="29.99" style="border: none; width:85px" readonly /></td>
+            <td>₹ <label id="sub"></label></td>
+            <td><a href="#">delete</a></td>
+        </tr>
+            
+        <tr>
+            <td>
+                <div class="pic">
+                    <img src="https://m.media-amazon.com/images/I/61lQlSSOSiL._AC_UF1000,1000_QL80_.jpg" alt="" height="100%" width="100%">
+                </div>
+                Woven trellies hardware<br>clip ring- bronz
+            </td>
+            <td><input type="number" id="qtyy" value="1" min="0" max="10" style="width:85px" onchange="subtotal()"/></td>
+            <td>Rs.<input type="text" id="pricee" value="12.99" style="border: none; width:85px" readonly /></td>
+            <td>₹ <label id="sun"></label></td>
+            <td><a href="#">delete</a></td>
+        </tr>
+    </table>
+
+    <script>
+        function subtotal()
+        {
+            var qty=document.getElementById("qty").value;
+            var price=document.getElementById("price").value;            
+            var t=price*qty;
+            document.getElementById("sub").innerHTML=t;
+
+            /* function for second row----- */
+
+            var qt=document.getElementById("qtyy").value;
+            var pric=document.getElementById("pricee").value;            
+            var o=pric*qt;
+            document.getElementById("sun").innerHTML=o;            
+        }
+        
+    </script>
+   
+</body>
+</html>

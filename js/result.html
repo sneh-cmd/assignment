@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        .res{
+            border: 1px solid black;
+            width: 35%;
+            margin: auto;
+            padding: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="res">
+        <h3>Marksheet for information technology</h3>
+        <p>Enter marks</p>
+        <form>
+            <label for="fname">1. C language : </label>
+            <input type="number" id="aa"><br><br>
+
+            <label for="fname">2. C++ languagee : </label>
+		    <input type="number" id="bb"><br><br>
+
+            <label for="fname">3. Database : </label>
+		    <input type="number" id="cc"><br><br>
+
+            <label for="fname">4. html : </label>
+		    <input type="number" id="dd"><br><br>
+
+            <label for="fname">5. css : </label>
+		    <input type="number" id="ee"><br><br>
+
+            <label for="fname">6. php : </label>
+		    <input type="number" id="ff"><br><br>
+
+            <label for="fname">7. core jaava : </label>
+		    <input type="number" id="gg"><br><br>
+            <button type="button" onclick="tot()">Result</button>
+        </form>
+        <h3 id="demo"></h3>
+        <h3 id="mode"></h3>
+    </div>
+    <script>
+        function tot(){
+            let a=parseInt(document.getElementById("aa").value);
+            let b=parseInt(document.getElementById("bb").value);
+            let c=parseInt(document.getElementById("cc").value);
+            let d=parseInt(document.getElementById("dd").value);
+            let e=parseInt(document.getElementById("ee").value);
+            let f=parseInt(document.getElementById("ff").value);
+            let g=parseInt(document.getElementById("gg").value);
+            let tot= a+b+c+d+e+f+g;
+            let per= parseInt(tot*100/350);
+            document.getElementById("demo").innerHTML="Total is : "+ tot+" /350"+ "    percentage is : "+per+"%";
+        }
+    </script>
+</body>
+</html>

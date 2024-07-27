@@ -1,0 +1,13 @@
+<script>
+    /* Q.51 Write a JavaScript program to get the current date. Expected Output : 
+    mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy? */
+
+    const d = new Date();
+    let m = d.getMonth()+1;
+
+    console.log("Current date is :" + m + "-" +d.getDate()  + "-" + d.getFullYear() + " or " + m + "/" +d.getDate()  + "/" + d.getFullYear());
+
+    console.log("Another way of Current date is :" +d.getDate()  + "-" + m + "-" + d.getFullYear() + " or " + d.getDate() + "/" + m + "/" + d.getFullYear());
+
+    
+</script>
